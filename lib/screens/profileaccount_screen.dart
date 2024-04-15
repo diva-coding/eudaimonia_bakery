@@ -34,7 +34,7 @@ class _AccountScreenState extends State<AccountScreen> {
             SizedBox(height: 8.0),
             Row(children: [
               Text(_username, style: TextStyle(fontSize: 16.0)),
-              SizedBox(width: 190),
+              SizedBox(width: 140),
               IconButton(
                 onPressed: () {
                   _showEditUsername();
@@ -48,7 +48,7 @@ class _AccountScreenState extends State<AccountScreen> {
             ),
             Row(children: [
               Text(_email, style: TextStyle(fontSize: 16.0)),
-              SizedBox(width: 150),
+              SizedBox(width: 100),
               IconButton(
                 onPressed: () {
                   _showEditEmail();

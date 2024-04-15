@@ -1,8 +1,9 @@
+import 'package:eudaimonia_bakery/screens/home_page.dart';
 import 'package:eudaimonia_bakery/screens/home_screen.dart';
-import 'package:eudaimonia_bakery/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MainApp());
 }
 
@@ -13,14 +14,14 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: Color.fromARGB(255, 179, 126, 89),
+        primaryColor: const Color.fromARGB(255, 179, 126, 89),
         fontFamily: 'Poppins'
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      home: const HomePage(),
       routes: {
-        '/home': (context) => const HomeScreen()
-      } 
+        '/home': (context) => const HomeScreen(),
+      },
     );
   }
 }

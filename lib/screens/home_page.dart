@@ -1,8 +1,10 @@
+import 'package:flutter/material.dart';
 import 'package:eudaimonia_bakery/screens/home_screen.dart';
 import 'package:eudaimonia_bakery/screens/menu_screen.dart';
+import 'package:eudaimonia_bakery/screens/admin/menu_list_screen.dart';
 import 'package:eudaimonia_bakery/screens/profile_screen.dart';
 import 'package:eudaimonia_bakery/screens/shopping_cart_screen.dart';
-import 'package:flutter/material.dart';
+import 'package:eudaimonia_bakery/screens/admin/voucher_screen.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class HomePage extends StatefulWidget {
@@ -38,10 +40,23 @@ class _HomePageState extends State<HomePage> {
               accountEmail: Text ('lovyethasirait@gmail.com')
             ),
             ListTile(
+              title: const Text('CRUD API | Manage Voucher'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => VoucherScreen()));
+              },
+            ),
+            ListTile(
+              title: const Text('CRUD SQLite | Manage Menu'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => MenuListScreen(),));
+              },
+            ),
+            Divider(),
+            ListTile(
               title: const Text('Home'),
               selected: HomeScreen == 0,
               onTap: () {
-                setState(()  => _index =0);
+                setState(()  => _index = 0);
                 Navigator.pop(context);
               },
             ),
