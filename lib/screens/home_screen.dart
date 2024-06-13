@@ -1,3 +1,4 @@
+import 'package:eudaimonia_bakery/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -19,7 +20,7 @@ class HomeScreen extends StatelessWidget {
                 height: 250,
                 padding: const EdgeInsets.only(top: 10),
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 232, 232, 232),
+                  color: Constants.primaryColor,
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(35),
                     topRight: Radius.circular(35),
@@ -38,7 +39,7 @@ class HomeScreen extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 15),
                       height: 50,
                       decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 255, 255, 255),
+                        color: Constants.primaryColor,
                         borderRadius: BorderRadius.all(Radius.circular(25)),
                       ),
                       child: Row(
@@ -69,14 +70,14 @@ class HomeScreen extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 40,
                               fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 255, 255, 255),
+                              color: Constants.primaryColor,
                             ),
                           ),
                           Text(
                             "Mau makan apa hari ini?",
                             style: TextStyle(
                               fontSize: 18,
-                              color: Color.fromARGB(255, 255, 255, 255),
+                              color: Constants.primaryColor,
                             ),
                           ),
                         ],
@@ -98,7 +99,7 @@ class HomeScreen extends StatelessWidget {
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20),
                     ),
-                    color: Color.fromARGB(255, 179, 126, 89),
+                    color: Constants.secondaryColor,
                   ),
                   child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -110,7 +111,7 @@ class HomeScreen extends StatelessWidget {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
-                            color: Colors.white
+                            color: Constants.textColor
                           ),
                         ),
                       ),
@@ -119,7 +120,7 @@ class HomeScreen extends StatelessWidget {
                         child: Text(
                           'Here is the best selling product this week...',
                           style: TextStyle(
-                            color: Colors.white
+                            color: Constants.textColor
                           ),
                         ),
                       ),
@@ -148,7 +149,7 @@ class HomeScreen extends StatelessWidget {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
-                            color: Colors.white
+                            color: Constants.textColor
                           ),
                         ),
                       ),

@@ -12,16 +12,19 @@ class _MenuScreenState extends State<MenuScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text('All Products',
+            title: const Text('All Products',
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                     color: Colors.white)),
-            backgroundColor: Color.fromARGB(255, 179, 126, 89)),
-        backgroundColor: Color.fromARGB(255, 179, 126, 89),
+            backgroundColor: const Color.fromARGB(255, 179, 126, 89),
+            centerTitle: true,
+            automaticallyImplyLeading: false,
+        ),
+        backgroundColor: const Color.fromARGB(255, 179, 126, 89),
         body: ListView(
           scrollDirection: Axis.vertical,
-          children: [
+          children: const [
             Padding(
               padding: EdgeInsets.all(8.0),
               child: Text('Bread',
@@ -30,12 +33,12 @@ class _MenuScreenState extends State<MenuScreen> {
                       fontWeight: FontWeight.bold,
                       color: Colors.white)),
             ),
-            const ProductCard(
+            ProductCard(
               menu: 'Eudaimonia Original Bread',
               image: 'assets/images/eudaimonia_bread.jpg',
               description: "Unique sourdough bread with rosemary and sea salt flavor.",
             ),
-            const ProductCard(
+            ProductCard(
               menu: 'Wheat Bread',
               image: 'assets/images/wheat_bread.jpeg',
               description: 'Whole wheat bread, freshly baked with a wholesome taste and hearty texture.',
@@ -124,7 +127,7 @@ class ProductCard extends StatelessWidget {
                 child: Container(
                   child: Padding(
                     padding:
-                        EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
+                        const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
                     child: Text(
                       'Add',
                       style:
@@ -134,7 +137,7 @@ class ProductCard extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
-                      color: Color.fromARGB(255, 179, 126, 89),
+                      color: const Color.fromARGB(255, 179, 126, 89),
                     ),
                   ),
                 ),

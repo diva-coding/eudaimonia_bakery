@@ -34,21 +34,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 SizedBox(width: 20),
                 CircleAvatar(
                   radius: 70.0,
-                  backgroundImage: AssetImage('assets/images/me.jpg'),
+                  backgroundImage: AssetImage('assets/images/background.png'),
                 ),
                 SizedBox(width: 20),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Lovyetha Evelyn Sirait',
+                    'User',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.white
                     ),
                   ),
                   Text(
-                    'lovyethasirait@gmail.com',
+                    'user@gmail.com',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.blue,

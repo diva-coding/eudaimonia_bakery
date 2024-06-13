@@ -1,5 +1,7 @@
 import 'package:eudaimonia_bakery/screens/home_page.dart';
 import 'package:eudaimonia_bakery/screens/home_screen.dart';
+import 'package:eudaimonia_bakery/screens/routes/LoginScreen/login_screen.dart';
+import 'package:eudaimonia_bakery/screens/routes/RegisterScreen/register.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,8 +21,12 @@ class MainApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
+      initialRoute: '/login-screen',
       routes: {
-        '/home': (context) => const HomeScreen(),
+        '/create-account': (context) => const CreateAccount(),
+        '/login-screen': (context) => const LoginScreen(),
+        '/home-page': (context) => const HomePage(),
+        '/home-screen' :(context) => const HomeScreen(),
       },
     );
   }

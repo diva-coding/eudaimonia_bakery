@@ -1,11 +1,12 @@
+import 'package:eudaimonia_bakery/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:eudaimonia_bakery/screens/home_screen.dart';
 import 'package:eudaimonia_bakery/screens/menu_screen.dart';
-import 'package:eudaimonia_bakery/screens/admin/menu_list_screen.dart';
 import 'package:eudaimonia_bakery/screens/profile_screen.dart';
 import 'package:eudaimonia_bakery/screens/shopping_cart_screen.dart';
 import 'package:eudaimonia_bakery/screens/admin/voucher_screen.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:eudaimonia_bakery/screens/routes/Menu/list_type_product.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -19,9 +20,9 @@ class _HomePageState extends State<HomePage> {
   int _index = 0;
 
   List<Widget> _screens = [
-    const HomeScreen(),
-    const MenuScreen(),
-    const ProfileScreen()
+    HomeScreen(),
+    ProductListScreen(),
+    ProfileScreen(),
   ];
 
   @override
@@ -34,7 +35,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             const UserAccountsDrawerHeader(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 179, 126, 89),
+                color: Constants.secondaryColor,
               ),
               accountName: Text ('Lovyetha Evelyn Sirait'), 
               accountEmail: Text ('lovyethasirait@gmail.com')
@@ -43,12 +44,6 @@ class _HomePageState extends State<HomePage> {
               title: const Text('CRUD API | Manage Voucher'),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => VoucherScreen()));
-              },
-            ),
-            ListTile(
-              title: const Text('CRUD SQLite | Manage Menu'),
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => MenuListScreen(),));
               },
             ),
             Divider(),
