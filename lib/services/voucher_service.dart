@@ -1,7 +1,8 @@
-import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:eudaimonia_bakery/models/voucher.dart';
+
 import 'package:eudaimonia_bakery/endpoints/endpoints.dart';
+import 'package:eudaimonia_bakery/models/voucher.dart';
+import 'package:http/http.dart' as http;
 
 class VoucherService{
     static Future<List<Voucher>> fetchVouchers() async{

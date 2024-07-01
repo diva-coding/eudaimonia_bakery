@@ -1,12 +1,12 @@
-import 'package:flutter/material.dart';
+import 'package:eudaimonia_bakery/screens/routes/User/Transaction/shopping_cart_screen.dart';
 import 'package:eudaimonia_bakery/utils/constants.dart';
-import 'package:eudaimonia_bakery/screens/shopping_cart_screen.dart';
+import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final bool automaticallyImplyLeading;
 
-  CustomAppBar({required this.title, this.automaticallyImplyLeading = true});
+  const CustomAppBar({super.key, required this.title, this.automaticallyImplyLeading = true});
 
   @override
   Widget build(BuildContext context) {
@@ -26,15 +26,15 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         Badge(
           backgroundColor: Colors.red,
-          padding: EdgeInsets.all(7),
+          padding: const EdgeInsets.all(7),
           child: InkWell(
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ShoppingCartScreen()),
+                MaterialPageRoute(builder: (context) => const ShoppingCartScreen()),
               );
             },
-            child: Icon(Icons.shopping_bag_outlined),
+            child: const Icon(Icons.shopping_bag_outlined),
           ),
         )
       ],
@@ -42,5 +42,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
